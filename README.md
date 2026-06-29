@@ -43,20 +43,25 @@ git clone https://github.com/your-username/aws-ec2-lifecycle-automation.git
 cd aws-ec2-lifecycle-automation
 ```
 ### 2. Provision EC2 with Terraform
-
+```
 cd terraform
 terraform init
 terraform apply
-
+```
 ### 3. Install dependencies
+```
 pip3 install -r requirements.txt
+```
 
 ### 4. Run monitoring
+```
 python3 scripts/ec2_status.py
+```
 
 ### 5. Run cleanup
+```
 python3 scripts/cleanup.py
-
+```
 
 ## CI/CD with Jenkins
 - **Pipeline stages**: Checkout → Terraform Plan → Approval → Apply → Python Scripts → Cleanup
